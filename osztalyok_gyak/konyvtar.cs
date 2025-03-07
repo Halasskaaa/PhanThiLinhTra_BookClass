@@ -26,6 +26,15 @@ namespace osztalyok_gyak
 		public int PageCount { get => pageCount; set => pageCount = value; }
 		public int ReleaseYear { get => releaseYear; set => releaseYear = value; }
 
+		public void GetBookByTitle(Book[] books, string title)
+		{
 
+		}
+
+
+		public override string ToString()
+		{
+			return $"Title: {title}, Author: {author}, Release Year: {releaseYear}, Page Count: {pageCount}";
+		}
 	}
 }
