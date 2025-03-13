@@ -41,6 +41,13 @@ namespace osztalyok_gyak
 			return null;
 		}
 
+		public void EditBookData(string newTitle, string newAuthor, int newPageCount, int newReleaseYear) 
+		{
+			this.title = newTitle;
+			this.author = newAuthor;
+			this.pageCount = newPageCount;
+			this.releaseYear = newReleaseYear;
+		}
 
 		public override string ToString()
 		{
