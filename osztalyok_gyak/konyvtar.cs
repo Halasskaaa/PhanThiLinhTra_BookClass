@@ -21,14 +21,24 @@ namespace osztalyok_gyak
 			this.releaseYear = releaseYear;
 		}
 
-		public string Title { get => title; set => title = value; }
-		public string Author { get => author; set => author = value; }
-		public int PageCount { get => pageCount; set => pageCount = value; }
-		public int ReleaseYear { get => releaseYear; set => releaseYear = value; }
+		public string Title { get => title; }
+		public string Author { get => author; }
+		public int PageCount { get => pageCount; }
+		public int ReleaseYear { get => releaseYear; }
 
 		public void GetBookByTitle(Book[] books, string title)
 		{
+			foreach (Book item in books) 
+			{
+				string bookTitle = book.Title.ToLower();
+				string searchTitle = title.ToLower();
 
+				if (bookTitle == searchTitle) 
+				{
+					return item;	
+				}
+			}
+			return null;
 		}
 
 
