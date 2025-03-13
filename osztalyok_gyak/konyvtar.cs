@@ -26,11 +26,11 @@ namespace osztalyok_gyak
 		public int PageCount { get => pageCount; }
 		public int ReleaseYear { get => releaseYear; }
 
-		public void GetBookByTitle(Book[] books, string title)
+		public static Book GetBookByTitle(Book[] books, string title)
 		{
 			foreach (Book item in books) 
 			{
-				string bookTitle = book.Title.ToLower();
+				string bookTitle = item.Title.ToLower();
 				string searchTitle = title.ToLower();
 
 				if (bookTitle == searchTitle) 
