@@ -12,8 +12,27 @@
 
 			Book[] books = new Book[] { book1, book2, book3, book4, book5 };
 
-			
+			// GetBookByTitle(Book[] books, string title) metódus tesztelése
 
+			Book foundBook = Book.GetBookByTitle(books, "Shack Pallett at 5");
+			if (foundBook != null)
+			{
+				Console.WriteLine( "Book found: " + foundBook );
+			}
+			else
+			{
+				Console.WriteLine( "Book not found." );	
+			}
+
+			// EditBookData method testing
+
+			Console.WriteLine("\nBefore editing: ");
+			Console.WriteLine(book1);
+
+			book1.EditBookData("Hex: Nothing but Misery", "Kaneki Ken", 780, 1120);
+
+			Console.WriteLine("\nAfter editing: ");
+			Console.WriteLine(book1);
 
 		}
 	}
